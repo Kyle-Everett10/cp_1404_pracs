@@ -17,8 +17,6 @@ def main():
             result = temperature_celsius_converter(celsius)
             temperature_format = "F"
         elif choice == "F":
-            # TODO: Write this section to convert F to C and display the result
-            # Hint: celsius = 5 / 9 * (fahrenheit - 32)
             fahrenheit = float(input("Fahrenheit: "))
             result = temperature_fahrenheit_converter(fahrenheit)
             temperature_format = "C"
