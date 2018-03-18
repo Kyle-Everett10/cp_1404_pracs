@@ -16,3 +16,4 @@ def score_checker(score):
 
 
 main()
+print("Done")
