@@ -10,7 +10,7 @@ def main():
     last_month = int(input("How many months? "))
 
     for month in range(1, last_month + 1):
-        income = float(input("Enter income for month {}: ".format(str(month))))
+        income = float(input("Enter income for month {}: ".format(month)))
         incomes.append(income)
     report_income(incomes, last_month)
 
