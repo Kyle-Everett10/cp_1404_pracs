@@ -14,9 +14,9 @@ for lines in range(0, number_of_lines):
                     while new_number == number:
                         new_number = random.randrange(1, 49)
                     if new_number > number:
-                        numbers.insert(index+1, new_number)
+                        numbers.insert(index, new_number)
                     elif new_number < number:
-                        numbers.insert(index-1, new_number)
+                        numbers.insert(index-2, new_number)
                     index += 1
                     break
         else:
