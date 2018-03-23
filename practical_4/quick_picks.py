@@ -8,6 +8,7 @@ def main():
 
 
 def generate_line():
+    """"Generates a line of random numbers"""
     numbers = []
     list_has_values = False
     for current_number in range(0, 6):
