@@ -13,3 +13,5 @@ for letter in longest_word:
     max_space += 1
 for word in word_collection:
     print("{:{}} = {}".format(word, max_space, word_collection[word]))
+
+print("Finished")

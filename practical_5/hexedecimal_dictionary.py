@@ -10,3 +10,5 @@ while input != "":
     else:
         print("That colour is not in the current dictionary, please input a new colour name")
     colour_input = input("Type in a colour name: ")
+
+print("Finished")
