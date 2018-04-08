@@ -10,19 +10,28 @@ class MilesToKilometersConverter(App):
         self.root = Builder.load_file('converter_layout.kv')
         return self.root
 
+    def real_time_conversion(self, unconverted_number):
+        try:
+            unconverted_number_int = int(unconverted_number)
+            self.root.ids.output_label.text = str(self.handle_conversion(unconverted_number_int))
+        except (TypeError, ValueError):
+            self.root.ids.output_label.text = str(self.handle_conversion(0))
+
     def handle_increment(self, increment):
         try:
-            self.root.ids.input_number.text = str(int(self.root.ids.input_number.text) + increment)
+            unconverted_number = int(self.root.ids.input_number.text)
+            self.root.ids.input_number.text = str(unconverted_number + increment)
         except (TypeError, ValueError):
-            self.root.ids.input_number.text = str(0+increment)
+            unconverted_number = 0 + increment
+            self.root.ids.input_number.text = str(unconverted_number)
+        self.root.ids.output_label.text = str(self.handle_conversion(unconverted_number))
 
     def handle_conversion(self, value):
         try:
-            local_value = int(value)
-            self.root.ids.output_label.text = str(local_value * MILES_TO_KILOMETERS_RATE)
+            converted_number = value * MILES_TO_KILOMETERS_RATE
         except (TypeError, ValueError):
-            local_value = 0
-            self.root.ids.output_label.text = str(local_value)
+            converted_number = 0
+        return converted_number
 
 
 MilesToKilometersConverter().run()
