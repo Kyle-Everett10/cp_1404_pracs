@@ -9,7 +9,7 @@ class NameLister(App):
         self.names = ["Kyle", "James", "Jackson"]
 
     def build(self):
-        self.title = "Name Lister"
+        self.title = "Name Lister v1.0"
         self.root = Builder.load_file("name_lister_layout")
         self.display_names()
         return self.root
