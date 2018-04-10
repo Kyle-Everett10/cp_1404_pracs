@@ -20,7 +20,11 @@ class MilesToKilometersConverter(App):
     def handle_increment(self, increment):
         try:
             unconverted_number = int(self.root.ids.input_number.text)
-            self.root.ids.input_number.text = str(unconverted_number + increment)
+            if unconverted_number >= 0:
+                self.root.ids.input_number.text = str(unconverted_number + increment)
+            else:
+                unconverted_number = 0
+                self.root.ids.input_number.text = str(unconverted_number)
         except (TypeError, ValueError):
             unconverted_number = 0 + increment
             self.root.ids.input_number.text = str(unconverted_number)

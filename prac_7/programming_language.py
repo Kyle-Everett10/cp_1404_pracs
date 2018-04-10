@@ -7,6 +7,5 @@ class ProgrammingLanguage:
         self.year = year
 
     def __str__(self):
-        info = str("{}, {} typing, Reflection = {}, First appeared in {}".format(self.language_name, self.typing,
-                                                                                 self.reflection, self.year))
-        return info
+        return "{}, {} typing, Reflection = {}, First appeared in {}".format(self.language_name, self.typing,
+                                                                             self.reflection, self.year)
