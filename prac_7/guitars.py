@@ -11,16 +11,9 @@ def main():
 
 
 def add_guitar():
+    running_function = True
     guitars = []
-    guitar_name = input("Name: ")
-    if guitar_name == "":
-        return guitars
-    guitar_year = int(input("Year: "))
-    guitar_cost = float(input("Cost: $"))
-    new_guitar = Guitar(guitar_name, guitar_cost, guitar_year)
-    guitars.append(new_guitar)
-    print("{} ({}), worth ${} added!".format(guitar_name, guitar_year, guitar_cost))
-    while guitar_name != "":
+    while running_function:
         guitar_name = input("Name: ")
         if guitar_name == "":
             return guitars
