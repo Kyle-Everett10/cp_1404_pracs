@@ -9,3 +9,9 @@ class ProgrammingLanguage:
     def __str__(self):
         return "{}, {} typing, Reflection = {}, First appeared in {}".format(self.language_name, self.typing,
                                                                              self.reflection, self.year)
+
+    def is_dynamic(self):
+        if self.typing == "Dynamic":
+            return True
+        else:
+            return False
