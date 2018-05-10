@@ -12,6 +12,5 @@ class UnreliableCar(Car):
         chance_to_drive = randrange(0, 101)
         if chance_to_drive >= self.reliability:
             distance = 0
-        super().drive(distance)
-        return distance
+        return super().drive(distance)
 

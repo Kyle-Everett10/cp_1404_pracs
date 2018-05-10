@@ -12,9 +12,4 @@ class SilverServiceTaxi(Taxi):
         return super().get_fare() + self.FLAG_FALL
 
     def __str__(self):
-        return "{}, fuel = {}, odo = {}, {}km on current fare, ${}/km plus flag fall of {}".format(self.car_name,
-                                                                                                   self.fuel,
-                                                                                                   self.odometer,
-                                                                                                   self.current_fare_distance,
-                                                                                                   self.price_per_km,
-                                                                                                   self.FLAG_FALL)
+        return super().__str__() + "plus flag fall of {}".format(self.FLAG_FALL)
