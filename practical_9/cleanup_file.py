@@ -61,15 +61,15 @@ def get_fixed_filename(filename):
                     new_name += character
                     new_name += "_"
                 else:
-                    if new_name[-1] == "_":
-                        new_name += character.upper()
+                    if index > 0:
+                        if new_name[-1] == "_":
+                            new_name += character.upper()
+                        else:
+                            new_name += character
                     else:
                         new_name += character
             else:
-                if new_name[-1] == "_":
-                    new_name += character.upper()
-                else:
-                    new_name += character
+                new_name += character
         except IndexError:
             new_name += "t"
 
