@@ -11,7 +11,7 @@ def main():
     print("Current directory is", os.getcwd())
 
     # change to desired directory
-    os.chdir('C:\\Users\\evere-ka12w\\Documents\\cp_1404_pracs\\practical_9\\Lyrics\\Lyrics\\Christmas')
+    os.chdir('C:\\Users\\kaeve\\PycharmProjects\\cp_1404_pracs\\practical_9\\Lyrics\\Lyrics\\Christmas')
     # print a list of all files (test)
     print(os.listdir('.'))
 
@@ -51,8 +51,6 @@ def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
     # First, replace the spaces and .TXT (the easy part)
     filename = filename.replace(" ", "_").replace(".TXT", ".txt")
-    # TODO: step-by-step, consider the problem cases and solve them
-
     new_name = ""
     for index, character in enumerate(filename):
         try:
