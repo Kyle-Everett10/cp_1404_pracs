@@ -27,4 +27,5 @@ def main():
                     shutil.move(filename, extension_and_directory.get(extension))
     print("All sorted! Have a nice day!")
 
+
 main()
