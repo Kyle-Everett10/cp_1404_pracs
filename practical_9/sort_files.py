@@ -4,7 +4,7 @@ import os
 
 def main():
     os.chdir("FilesToSort")
-    print(os.getcwd())
+    print("Currently in{}".format(os.getcwd()))
     for dir_name, dir_list, file in os.walk(os.getcwd()):
         extension_types_and_directory = create_directories(file)
         move_files(file, extension_types_and_directory)
@@ -17,7 +17,6 @@ def create_directories(file):
     extension_and_directory = {}
     for filename in file:
         name_and_extension = filename.split(".")
-        print(name_and_extension)
         if name_and_extension[1] not in extensions:
             extensions.append(name_and_extension[1])
     for extension in extensions:
