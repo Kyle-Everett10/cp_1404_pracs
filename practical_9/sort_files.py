@@ -35,4 +35,5 @@ def move_files(file, dictionary):
             if extension == filename.split(".")[1]:
                 shutil.move(filename, dictionary.get(extension))
 
+
 main()
