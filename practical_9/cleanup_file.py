@@ -33,18 +33,18 @@ def main():
             # So, you need to get valid filenames before you can use these.
 
             # Option 1: rename file to new name - in place
-            # os.rename(filename, new_name)
+            os.rename(filename, new_name)
 
             # Option 2: move file to new place, with new name
             # shutil.move(filename, 'temp/' + new_name)
 
             # Processing subdirectories using os.walk()
 
-            # os.chdir('..')  # .. means "up" one directory
-            # for dir_name, subdir_list, file_list in os.walk('.'):
-            #     print("In", dir_name)
-            #     print("\tcontains subdirectories:", subdir_list)
-            #     print("\tand files:", file_list)
+            os.chdir('..')  # .. means "up" one directory
+            for dir_name, subdir_list, file_list in os.walk('.'):
+                print("In", dir_name)
+                print("\tcontains subdirectories:", subdir_list)
+                print("\tand files:", file_list)
 
 
 def get_fixed_filename(filename):
@@ -65,7 +65,7 @@ def get_fixed_filename(filename):
                         else:
                             new_name += character
                     else:
-                        new_name += character
+                        new_name += character.upper()
             else:
                 new_name += character
         except IndexError:
